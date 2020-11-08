@@ -5,6 +5,10 @@ import pickle
 
 class predict:
 
+    """
+    This is an sentiment analysis using text classification
+    """
+
     def predictModel(self,inputText):
 
         loaded_Model = tf.keras.models.load_model('./weights/sentiment.hs')
@@ -27,3 +31,4 @@ if __name__ == "__main__":
     sPredict = predict()
     sOutput = sPredict.predictModel(stringInput)
     print("The review of the game seems to be : ", sOutput)
+    print(predict.__doc__)
